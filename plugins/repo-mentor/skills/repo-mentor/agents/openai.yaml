@@ -1,0 +1,4 @@
+interface:
+  display_name: "RepoMentor"
+  short_description: "通过真实开源代码逆向分析、独立重建与知识验收，循序渐进掌握工程能力"
+  default_prompt: "使用 $repo-mentor 学习一个 GitHub 或本地项目，先逆向分析，再制定个性化学习路线。"

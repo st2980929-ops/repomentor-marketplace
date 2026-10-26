@@ -1,0 +1,26 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "repo-mentor",
+  "version": "0.1.0",
+  "description": "Learn how an open-source project works through code-based analysis, a personalized roadmap, independent rebuilding, review, and recorded assessments.",
+  "keywords": ["learning", "architecture", "code-reading", "mentoring"],
+  "extensions": {
+    "com.openai": {
+      "requires_local_executor": true,
+      "interface": {
+        "displayName": "RepoMentor",
+        "shortDescription": "Learn by rebuilding projects",
+        "longDescription": "Turn a GitHub or local repository into a learning project. RepoMentor guides Codex to inspect real source code, explain architecture and data flow, and design a roadmap around your experience and goals. Choose Guided, Tutor, or Demonstration. Implement core features in a separate directory, review your work, and record understanding, practice, and transfer assessments in local .learning files. Resume from those files or import a LEARNING_BRIEF.md. Codex performs analysis and teaching; bundled Python 3.10+ standard-library helpers only inventory local files and initialize or inspect learning state. Repository access uses your host's available tools. Reference code is read-only by default; running it or installing dependencies requires your confirmation. RepoMentor does not automatically rebuild projects, grade mastery, or move to the next task without your confirmation.",
+        "category": "Education & Research",
+        "capabilities": [],
+        "defaultPrompt": [
+          "使用 $repo-mentor 学习一个 GitHub 项目。先分析真实代码并制定路线，等我确认后再开始任务。",
+          "使用 $repo-mentor 继续上次的学习，先读取 .learning 文件并核对当前任务。",
+          "使用 $repo-mentor 读取 LEARNING_BRIEF.md，验证目标仓库并制定学习路线。"
+        ],
+        "logo": "./assets/icon.svg",
+        "composerIcon": "./assets/icon.svg"
+      }
+    }
+  }
+}
